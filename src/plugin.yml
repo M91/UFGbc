@@ -1,0 +1,12 @@
+main: me.ufg.plugin.UFGbc
+name: BCast
+version: 1.0
+author: M91
+description: BCast plugin for voting
+commands:
+    vote:
+        description: a BCast plugin
+        usage: /command [message]
+    shop:
+        description: shows link to shop
+        usage: /command
