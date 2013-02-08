@@ -6,7 +6,7 @@ description: BCast plugin for voting
 commands:
     vote:
         description: a BCast plugin
-        usage: /command [message]
     shop:
         description: shows link to shop
-        usage: /command
+    ufgreload:
+        description: reloads UFG plugin

@@ -1,4 +1,4 @@
-package me.ufg.plugin.commands;
+package me.ufg.plugin;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -7,10 +7,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Commandsvote implements CommandExecutor{
+public class vote implements CommandExecutor{
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLable, String[] args){
 	if(commandLable.equalsIgnoreCase("vote")){
-		if (args.length == 0)  {
+		if (args.length <= 0)  {
             sender.sendMessage(ChatColor.RED + "Usage: " + "/vote [message]");
             return false;
         }
@@ -33,10 +33,6 @@ public class Commandsvote implements CommandExecutor{
         return true;
         
     }
-	return false; 
-        
-    }
-
+	return false;
 }
-
-
+}
