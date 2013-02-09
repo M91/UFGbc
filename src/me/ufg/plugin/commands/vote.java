@@ -1,4 +1,4 @@
-package me.ufg.plugin;
+package me.ufg.plugin.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

@@ -2,12 +2,19 @@ package me.ufg.plugin;
 
 import java.io.File;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
+import me.ufg.plugin.commands.shop;
+import me.ufg.plugin.commands.vote;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 
+
 public class UFGbc extends JavaPlugin{
+	private static UFGbc instance = new UFGbc();
+
+	public static UFGbc getInstance() {
+		return instance;
+	}
 	@Override
 	public void onEnable(){
 		File file = new File(getDataFolder() + File.separator + "config.yml");
@@ -21,18 +28,9 @@ public class UFGbc extends JavaPlugin{
 			
 		}
 		getCommand("vote").setExecutor(new vote());
+		getCommand("shop").setExecutor(new shop());
+		getCommand("ufgreload").setExecutor(new shop());
 	}
 	
-	public boolean onCommand(CommandSender sender, Command cmd, String commandLable, String[] args){
-		if(commandLable.equalsIgnoreCase("shop")) {
-			sender.sendMessage("ShopLink " +this.getConfig().getString("ShopLink"));
-		    return true;
-			} else { if (commandLable.equalsIgnoreCase("ufgreload")){
-			this.reloadConfig();
-			sender.sendMessage("Config reloaded!");
-		}
-		
-		}return false;
-	}
-}
 
+}
